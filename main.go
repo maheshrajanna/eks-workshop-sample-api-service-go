@@ -14,7 +14,7 @@ func main() {
 
 		f := fib()
 
-		res := &response{Message: "Test class CICD??"}
+		res := &response{Message: "Test class TET-CICD??"}
 
 		for _, e := range os.Environ() {
 			pair := strings.Split(e, "=")
