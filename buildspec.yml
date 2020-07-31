@@ -29,7 +29,7 @@ phases:
       - export AWS_SESSION_TOKEN="$(echo ${CREDENTIALS} | jq -r '.Credentials.SessionToken')"
       - export AWS_EXPIRATION=$(echo ${CREDENTIALS} | jq -r '.Credentials.Expiration')
       - aws eks update-kubeconfig --name $EKS_CLUSTER_NAME
-      - cat /root/.kube/config
+      #- cat /root/.kube/config
       - kubectl apply -f sc.yaml
       - kubectl apply -f pv.yaml
       - kubectl apply -f pvc.yaml
