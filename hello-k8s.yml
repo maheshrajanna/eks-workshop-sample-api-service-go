@@ -32,7 +32,7 @@ spec:
       containers:
         - name: hello-k8s
           image: CONTAINER_IMAGE
-          command: ["/bin/sh"]
+          command: ["/bin/bash"]
           securityContext:
             privileged: false
             readOnlyRootFilesystem: true
