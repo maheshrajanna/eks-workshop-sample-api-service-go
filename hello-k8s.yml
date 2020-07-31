@@ -38,4 +38,10 @@ spec:
             allowPrivilegeEscalation: false
           ports:
             - containerPort: 8080
-
+          volumeMounts:
+            - name: persistent-storage
+              mountPath: /data
+      volumes:
+      - name: persistent-storage
+        persistentVolumeClaim:
+          claimName: efs-claim
