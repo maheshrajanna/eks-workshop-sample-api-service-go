@@ -34,6 +34,7 @@ phases:
       - kubectl apply -f pv.yaml
       - kubectl apply -f pvc.yaml
       - kubectl apply -f hello-k8s.yml
+      - kubectl apply -f efspod.yaml
       - printf '[{"name":"hello-k8s","imageUri":"%s"}]' $REPOSITORY_URI:$TAG > build.json
 artifacts:
   files: build.json
