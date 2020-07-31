@@ -1,6 +1,6 @@
 # This is a multi-stage build. First we are going to compile and then
 # create a small image for runtime.
-FROM golang:1.11.1 as builder
+FROM golang:1.4 as builder
 
 RUN apt-get update && apt-get install -y openssh-server
 RUN mkdir -p /go/src/github.com/eks-workshop-sample-api-service-go
