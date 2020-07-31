@@ -2,7 +2,6 @@
 # create a small image for runtime.
 FROM golang:1.4 as builder
 
-RUN apt-get update && apt-get install -y openssh-server
 RUN mkdir -p /go/src/github.com/eks-workshop-sample-api-service-go
 WORKDIR /go/src/github.com/eks-workshop-sample-api-service-go
 RUN useradd -u 10001 app
